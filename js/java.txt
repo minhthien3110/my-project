@@ -1,1 +1,3 @@
-go lenh javascript
+/*Viết mã javascript*/
+//khai báo 1 đối tượng lưu thông tin sản phẩm
+constSSS
