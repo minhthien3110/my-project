@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Chi tiết sản phẩm</title>
+        <meta charset="utf-8"> <link rel="stylesheet" href="../css/style2.css">
+        <script src="../js/lib.js"></script>
+    </head>
+    <body>
+        <div class="container" id="container">
+            <img src="../assets/images/phong canh.jpg" alt="ảnh" id="image">
+            <p id="name"></p>
+            <p id="price"></p>
+            <p id="description"></p>
+        </div>
+
+        <script>
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get("masp");
+
+            const foudProduct = products.find(obj => String(obj.id) === String(productId));
+
+            if (foudProduct) {
+                document.getElementById("name").innerText = foudProduct.name;
+                document.getElementById("price").innerText = foudProduct.price;
+                document.getElementById("description").innerText = foudProduct.description;
+                document.getElementById("image").src = foudProduct.image;
+            } else {
+                document.getElementById("container").innerHTML = "<h2>Sản phẩm không tồn tại hoặc đã bị xóa</h2><a href='../index.html'>Quay lại trang chủ</a>";
+            }
+        </script>
+    </body>
+</html>

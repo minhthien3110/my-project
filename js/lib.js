@@ -6,7 +6,7 @@ name:"Phong cảnh",
 price:50,
 description: "Đây là ảnh Phong Cảnh nổi tiếng ở Việt Nam và Nước Ngoài",
 image:"../assets/images/phong canh.jpg",
-link:"chi-tiet.html"
+link:"chitiet.html"
 },
 
 {
@@ -14,7 +14,7 @@ name:"Phong cảnh",
 price:50,
 description: "Đây là ảnh Phong Cảnh nổi tiếng ở Việt Nam và Nước Ngoài",
 image:"../assets/images/phong canh.jpg",
-link:"chi-tiet.html"
+link:"chitiet.html"
 },
 
 {
@@ -22,7 +22,7 @@ name:"Phong cảnh",
 price:50,
 description:"Đây là ảnh Phong Cảnh nổi tiếng ở Việt Nam và Nước Ngoài",
 image:"../assets/images/phong canh.jpg",
-link:"chi-tiet.html"
+link:"chitiet.html"
 }
 ];
 
@@ -68,7 +68,7 @@ function createItem(obj)
             //Tạo<a> chứa liên kết
                 const linkProduct = document.createElement("a");
                 linkProduct.innerHTML= "xem chi tiết";
-                linkProduct.setAttribute("href", obj.link);//sửa sau
+                linkProduct.href=`${obj.link}?masp=${obj.id}`;//sửa sau
 
             //Gán 4 con vào khung chứa Info
             containerInfo.appendChild(nameProduct);
